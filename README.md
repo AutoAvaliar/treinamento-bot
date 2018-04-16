@@ -1,5 +1,5 @@
 # Treinamento de desenvolvimento de Bots
-Treinamento e desenvolvimento de bot, utilizando o Bot Framework e Cognitive Services(as plataforma de inteligência da Microsoft).
+Treinamento e desenvolvimento de bot, utilizando o Bot Framework e Cognitive Services(a plataforma de inteligência da Microsoft).
 
 ###### Acesso ao Microsoft Azure
 https://azure.microsoft.com/pt-br/free/
