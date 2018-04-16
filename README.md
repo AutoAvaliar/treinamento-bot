@@ -1,8 +1,9 @@
-# treinamento-bot-nodejs
+# Treinamento de Desenvolvimento de Bots
 Treinamento e desenvolvimento de bot, utilizando o Bot Framework e Cognitive Services(as plataforma de inteligência da Microsoft).
 
 ###### Acesso ao Microsoft Azure
 https://azure.microsoft.com/pt-br/account/
+
 Crie uma conta do Microsoft Azure para conectar seu bot na nuvem. Se você
 ainda não possui uma conta no Microsoft Azure, há duas maneiras de obter
 acesso gratuitamente:
@@ -15,11 +16,11 @@ dados de cartão de crédito, que serão utilizados SOMENTE para validação de
 sua identidade, o que gerará uma cobrança de U$ 1,00 que será
 automaticamente estornada.
 
-###### NodeJs
+###### NodeJs 
 https://nodejs.org/en/
 
 ###### Bot Framework Emulator
 https://github.com/Microsoft/BotFramework-Emulator
 
-###### LUIS
+###### LUIS (Language Understanding Intelligent Service)
 https://www.luis.ai/applications
