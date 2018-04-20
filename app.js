@@ -1,16 +1,17 @@
 const restify = require('restify');
 const builder = require('botbuilder');
 const https = require('https');
+const quiz = require('./quiz');
 
 var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function () {
     console.log('%s listening to %s', server.name, server.url); 
- });
+});
 
  // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
-    appId: "450a51ca-0efb-47c4-93d2-c547e9f45e48",//process.env.MicrosoftAppId,
-    appPassword: "eqfaMSNC8545(|prqHRB4-{"//process.env.MicrosoftAppPassword
+    appId: "",//"450a51ca-0efb-47c4-93d2-c547e9f45e48",//process.env.MicrosoftAppId,
+    appPassword: ""//"eqfaMSNC8545(|prqHRB4-{"//process.env.MicrosoftAppPassword
 });
 
 server.post('/api/messages', connector.listen());
@@ -57,7 +58,7 @@ var bot = new builder.UniversalBot(connector, [
 //dialog de saudação
 bot.dialog('saudacao', [
     function (session) {    
-        builder.Prompts.text(session, "Olá, Tudo certo?");
+        builder.Prompts.text(session, "Olá, Bom dia!");
     },
     function (session, results) {
         session.endDialogWithResult(results);
@@ -65,14 +66,7 @@ bot.dialog('saudacao', [
 ]);
 
 //dialog de quiz
-bot.dialog('quiz', [
-    function (session) {    
-        builder.Prompts.text(session, "Alguma pergunta x?");
-    },
-    function (session, results) {
-        session.endDialogWithResult(results);
-    }
-]);
+bot.dialog('quiz', quiz.handler);
 
 //dialog de adeus
 bot.dialog('adeus', [
@@ -87,7 +81,7 @@ bot.dialog('adeus', [
 //dialog none
 bot.dialog('none', [
     function (session) {    
-        builder.Prompts.text(session, "Não entendi oq vc quiz dizer");
+        builder.Prompts.text(session, "Não entendi oq vc quis dizer");
     },
     function (session, results) {
         session.endDialogWithResult(results);
