@@ -19,4 +19,4 @@ https://nodejs.org/en/
 https://github.com/Microsoft/BotFramework-Emulator
 
 ###### LUIS (Language Understanding Intelligent Service)
-https://www.luis.ai/applications
+https://www.luis.ai/applications 
